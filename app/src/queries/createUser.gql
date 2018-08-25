@@ -1,0 +1,10 @@
+mutation($email: String!, $password: String!, $profileName: String!) {
+  createUser(email: $email, password: $password, profileName: $profileName) {
+    id
+    profileName
+  }, 
+  createSession(
+      email: $email,
+      password: $password,
+  )
+}

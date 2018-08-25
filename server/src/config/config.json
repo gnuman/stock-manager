@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "2u4vA3jBB7JwHjmxGdQwMtPRcXSdyzvU57btG5fEKurrqHQjuXGVx2GumDjR2UAM",
+    "database": "postgres",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "2u4vA3jBB7JwHjmxGdQwMtPRcXSdyzvU57btG5fEKurrqHQjuXGVx2GumDjR2UAM",
+    "database": "postgres",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "2u4vA3jBB7JwHjmxGdQwMtPRcXSdyzvU57btG5fEKurrqHQjuXGVx2GumDjR2UAM",
+    "database": "postgres",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

@@ -1,0 +1,78 @@
+
+"""
+A query which returns data
+"""
+type Query {
+  "Get the current logged in user"
+  currentUser(token: Token!): User
+}
+
+"""
+A mutation which modifies the state and returns data
+"""
+type Mutation {
+  "Create a new user"
+  createUser(
+    email:String!,
+    password:String!,
+    profileName: String!,
+    profilePic:String): User
+  "Generate a session token from a username and password"
+  createSession(
+    email: String!,
+    password: String!,
+  ): Token
+  "Add money into account"
+  addBalance(
+    userId: ID!,
+    amount: Int!,
+  ): Balance
+  "Buy stock method"
+  buyStocks(
+    userId: ID!,
+    scriptId: String!,
+    quantity: Int!,
+    price: Int!,
+  ): Stock
+  "Sell stock method"
+  sellStocks(
+    userId: ID!,
+    scriptName: String!,
+    quantity: Int!,
+    price: Int!,
+  ): Stock
+}
+"""
+A date, represented as an ISO UTC string
+"""
+scalar Date
+
+"""
+A registered user of the app
+"""
+type User {
+  "User ID"
+  id: ID!
+  "Username chosen by the user used for logging in, URLs, etc"
+  profileName: String!
+  "Email address of the user"
+  email: String!
+  stockBalance(limit: Int): [Stock!]!
+  moneyBalance: Int!
+}
+
+"A token used to authenticate the current user"
+scalar Token
+
+"stock associated with user"
+type Stock {
+  "script id"
+  scriptId: String!
+  "quantity"
+  quantity: Int!
+}
+
+"User balance"
+scalar Balance
+  
+

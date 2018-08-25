@@ -1,0 +1,12 @@
+version: "2.2"
+services:
+  postgres-shell:
+    build: postgres
+    init: true
+    env_file: '.env'
+    stdin_open: true
+    tty: true
+    command: [
+      "psql",
+      "host=${PG_HOST} port=5432 user=${PG_USER} password=${PG_PASSWORD}",
+    ]

@@ -1,0 +1,7 @@
+query (
+  $token: Token!,
+) {
+  currentUser(token: $token) {
+    id
+  }
+}

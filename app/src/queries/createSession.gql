@@ -1,0 +1,9 @@
+mutation(
+    $email: String!,
+    $password: String!,
+) {
+  createSession(
+      email: $email,
+      password: $password,
+  )
+}
