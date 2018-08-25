@@ -1,0 +1,12 @@
+query (
+  $token: Token!,
+) {
+  currentUser(token: $token) {
+    id
+    moneyBalance
+    stockBalance {
+      scriptId,
+      quantity
+    }           
+  }
+}
