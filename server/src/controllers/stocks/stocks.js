@@ -63,7 +63,7 @@ export const buyStocks = (userId, scriptId, quantity, price) =>
             },
           ).then(() => {
             deleteBalance(userId, scriptValue);
-            resolve({ scriptId, quantity:newQuantity });
+            resolve({ scriptId, quantity: newQuantity });
           });
         }
       })
@@ -77,4 +77,12 @@ export const sellStocks = (id, scriptName, quantity, price) =>
       .catch((error) => reject(error)),
   );
 
-export const stockBalance = (id) => [id];
+export const stockBalance = async (userId) => {
+  const whereClause = {
+    where: {
+      userId,
+    },
+  };
+  const stockAll = await Stocks.findAll(whereClause);
+  return stockAll;
+};

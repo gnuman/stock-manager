@@ -42,8 +42,8 @@ export const resolvers = {
       return profileName;
     },
     stockBalance: async ({ id }) => {
-      console.log('stockbalance');
-      return stockBalance(id);
+      const stocks = await stockBalance(id);
+      return stocks;
     },
     moneyBalance: async ({ id }) => getBalance(id),
   },
