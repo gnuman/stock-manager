@@ -14,3 +14,6 @@ export const REGISTER = "REGISTER";
 
 // Stock actions 
 export const STOCKHOME = 'STOCKHOME';
+
+// 
+export const AMOUNT_INPUT = 'AMOUNT_INPUT';

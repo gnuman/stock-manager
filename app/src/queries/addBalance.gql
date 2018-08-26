@@ -1,0 +1,6 @@
+mutation(
+    $userId: ID!,
+    $amount: Int!,
+) {
+  addBalance(userId:$userId, amount: $amount)
+}

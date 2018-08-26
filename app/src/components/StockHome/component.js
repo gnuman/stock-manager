@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 // import LoadButton from "../LoadButton/component";
 import styles from "./styles";
+import AddBalance from "../AddBalance/connector";
 
 export default class StockHome extends PureComponent {
   
@@ -14,15 +15,18 @@ export default class StockHome extends PureComponent {
   render() {
     return (
       <div>
+        <div>
+        <AddBalance />
         {this.props.currentUserBalanceQuery.loading ? (
             <label> Loading please wait </label>
         ):(
-         <div className={styles.container}>
-           <div className={styles.innerContainer}>
-             <label> This is home page </label>
-          </div>
-        </div>
-       )}
+            <div className={styles.container}>
+            <div className={styles.innerContainer}>
+              <label>To do Show stock table  </label>
+            </div>
+            </div>
+        )}
+       </div>
      </div>
     );
   }

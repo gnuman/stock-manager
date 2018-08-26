@@ -19,7 +19,8 @@ const initial = Map({
   isLoading: false,
   nextAction: null, // where to go once completed
   isLoggedIn: false,
-  token: null
+  token: null,
+  userId: 1,
 });
 
 const reducer = (state = initial, action) => {
